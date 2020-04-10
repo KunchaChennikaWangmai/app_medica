@@ -42,6 +42,10 @@ class PlacesScreenState extends State<PlacesScreen> {
       return new ListView(
         children: _places.map((f) {
           return new ListTile(
+            onTap: () {
+              Navigator.pushNamed(context, '/medicines');
+              return f.id;
+            },
             title: new Text(
               f.name,
               style: TextStyle(color: Colors.black),
